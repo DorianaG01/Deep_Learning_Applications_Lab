@@ -17,7 +17,7 @@ Replicate and understand the core findings of the ResNet paper:
 **Objective**: Demonstrate that residual connections solve vanishing gradient problems in deep networks
 
 <div align="center">
-<img src="lab1/results/MLP_comparison.png" alt="MLP vs ResidualMLP Comparison" width="55%">
+<img src="Deep_Learning_Applications_Lab/lab1/results/cnn_comparison.png" alt="MLP vs ResidualMLP Comparison" width="55%">
 </div>
 
 **Key Findings**:
