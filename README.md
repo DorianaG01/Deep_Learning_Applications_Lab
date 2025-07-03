@@ -79,11 +79,11 @@ Replicate and understand the core findings of the ResNet paper:
 
 ---
 
-# Lab 3: Image Story Generation 📚🖼️
+# Lab 3: Image Story Generation 
 
 An intelligent multi-modal AI system that combines computer vision and natural language processing to automatically generate creative stories from images.
 
-## 🎯 Objective
+##  Objective
 
 Create an end-to-end pipeline that:
 - **Analyzes images** using state-of-the-art vision models
@@ -91,7 +91,7 @@ Create an end-to-end pipeline that:
 - **Creates engaging narratives** using TinyStories language model
 - **Demonstrates multi-modal AI integration** for creative applications
 
-## 🔧 Architecture Pipeline
+##  Architecture Pipeline
 
 ```
 Image Input → BLIP Captioning → Prompt Engineering → TinyStories → Creative Story Output
@@ -102,7 +102,7 @@ Image Input → BLIP Captioning → Prompt Engineering → TinyStories → Creat
 - **Language Model**: roneneldan/TinyStories-33M
 - **Integration**: Custom prompt engineering for caption-to-story conversion
 
-## 📊 Generated Examples
+##  Generated Examples
 
 ### Example 1: Wildlife in Nature 🐻
 
@@ -161,23 +161,6 @@ Image Input → BLIP Captioning → Prompt Engineering → TinyStories → Creat
 >
 > They thanked him kindly before running off home. From then on, whenever they went into the woods, they would remember the generous elderly man and his special word.
 
-
-### Key Observations
-
-####  **Narrative Creativity**
-- **Consistent storytelling structure**: Introduction → Conflict → Resolution
-- **Character development**: Bears become helpful, children learn lessons
-- **Magical realism elements**: Talking animals, living trees, mysterious voices
-
-####  **Caption-to-Story Coherence**
-- **High relevance**: Stories directly incorporate caption elements
-- **Contextual expansion**: Simple captions evolve into complex narratives
-- **Thematic consistency**: Visual elements drive story direction
-
-####  **Language Quality**
-- **Child-friendly tone**: Stories suitable for young audiences
-- **Moral lessons**: Educational value embedded naturally
-- **Vocabulary diversity**: Rich descriptive language despite model size
 
 ##  Technical Implementation
 
