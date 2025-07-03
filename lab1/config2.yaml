@@ -1,0 +1,21 @@
+model:
+  input_size: 784
+  hidden_size: 256
+  output_size: 10
+
+dataset:
+  root: "./data"
+  batch_size: 128
+
+training:
+  epochs: 20
+  learning_rate: 0.001
+  dropout: 0.1
+  weight_decay: 0.0
+  depths: [ 8, 16, 32]
+  
+  
+  log_steps: 20           
+  early_stopping: true    
+  patience: 5 
+  track_gradients: true           

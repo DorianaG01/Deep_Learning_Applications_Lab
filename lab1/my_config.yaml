@@ -1,0 +1,66 @@
+# Configuration file for CNN vs ResNet comparison
+
+
+dataset:
+  name: "CIFAR10"
+  root: "./data"
+  batch_size: 128
+  num_workers: 4
+  augmentation: true
+
+
+training:
+  epochs: 20
+  learning_rate: 0.01
+  momentum: 0.9
+  weight_decay: 0.0005
+  optimizer: "sgd"  # sgd, adam
+  log_steps: 20
+
+scheduler:
+  type: "exponential"  # multistep, exponential, cosine
+  milestones: [8, 15]
+  gamma: 0.95
+
+
+models:
+  sizes: ["Small", "Medium", "Large"]
+  types: ["PlainCNN", "ResNet"]
+  
+ 
+  Small:
+    depths: [1, 1]
+    channels: [16, 32]
+    initial_channels: 16
+  
+  
+  Medium:
+    depths: [5, 5]
+    channels: [16, 32]
+    initial_channels: 16
+  
+
+  Large:
+    depths: [7, 7]
+    channels: [16, 32]
+    initial_channels: 16
+
+
+experiment:
+  name: "CNN_vs_ResNet_Comparison"
+  save_checkpoints: true
+  checkpoint_dir: "./checkpoints"
+  results_dir: "./results"
+  seed: 42
+
+
+device:
+  use_cuda: true
+  device_id: 0  
+
+
+visualization:
+  save_plots: true
+  show_plots: false
+  plot_format: "png"
+  dpi: 150
