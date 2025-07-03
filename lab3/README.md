@@ -118,14 +118,7 @@ optimizer = "adam"
 max_length = 256
 ```
 
-## Technical Requirements
-
-- **Python**: 3.7+
-- **GPU**: Recommended (automatic CPU fallback)
-- **RAM**: Minimum 8GB, recommended 16GB
-- **Storage**: ~2GB for models and dataset
-
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
