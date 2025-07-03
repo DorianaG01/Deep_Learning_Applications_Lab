@@ -25,6 +25,7 @@ Replicate and understand the core findings of the ResNet paper:
 <img src="./lab1//results/learning_curves.png" alt="MLP vs ResidualMLP Comparison" width="55%">
 </div>
 
+
 **Key Findings**:
 - **Standard MLP (16 layers)**: Severe training instability, poor convergence (~60-80% accuracy)
 - **ResidualMLP (16 layers)**: Stable training, consistent convergence (>95% accuracy)
@@ -54,7 +55,7 @@ Replicate and understand the core findings of the ResNet paper:
 | ResNet | Medium | [5,5] | ~77% | Improved |
 | ResNet | Large | [7,7] | **~78%** | **Best performance** |
 
-** Critical Insight**: PlainCNNs exhibit the "degradation problem" - deeper networks perform worse even on training data. ResNets completely solve this issue.
+**Critical Insight**: PlainCNNs exhibit the "degradation problem" - deeper networks perform worse even on training data. ResNets completely solve this issue.
 
 ---
 
