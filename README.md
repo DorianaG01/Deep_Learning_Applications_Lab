@@ -1,3 +1,8 @@
+# Deep Learning Applications Laboratory 
+A comprehensive collection of deep learning experiments covering fundamental concepts to advanced techniques.
+
+## Laboratories Overview
+
 # Lab 1: ResNet Paper Replication 
 
 This laboratory demonstrates the key insights of ResNet through a series of progressively complex experiments, from simple MLPs on MNIST to advanced transfer learning on CIFAR datasets.
