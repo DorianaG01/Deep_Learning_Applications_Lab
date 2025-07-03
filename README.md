@@ -17,7 +17,7 @@ Replicate and understand the core findings of the ResNet paper:
 **Objective**: Demonstrate that residual connections solve vanishing gradient problems in deep networks
 
 <div align="center">
-<img src="results/MLP_comparison.png" alt="MLP vs ResidualMLP Comparison" width="85%">
+<img src="lab1/results/MLP_comparison.png" alt="MLP vs ResidualMLP Comparison" width="55%">
 </div>
 
 **Key Findings**:
@@ -32,7 +32,7 @@ Replicate and understand the core findings of the ResNet paper:
 **Objective**: Demonstrate degradation problem in deep CNNs and ResNet's solution
 
 <div align="center">
-<img src="results/CNN_comparison.png" alt="CNN Architecture Comparison" width="85%">
+<img src="lab1/results/CNN_comparison.png" alt="CNN Architecture Comparison" width="55%">
 </div>
 
 **Key Findings**:
@@ -64,7 +64,7 @@ Replicate and understand the core findings of the ResNet paper:
 
 #### Phase 2: Fine-tuning Strategy Comparison
 
-<div align="center">
+<div align="center" style="font-size: 12px;" >
 
 | Rank | Strategy | Optimizer | Test Accuracy | Trainable Params |
 |------|----------|-----------|---------------|------------------|
