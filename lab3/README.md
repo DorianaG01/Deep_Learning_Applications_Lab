@@ -12,7 +12,7 @@ lab3/
 ├── data_exploration.py          # Dataset exploration
 ├── feature_extraction.py        # Feature extraction + SVM
 ├── fine_tuning.py              # DistilBERT fine-tuning
-└── translator_storyteller.py   # Additional script
+└── translator_storyteller.py   # Image-to-Story generator
 ```
 
 ##  Installation
@@ -36,7 +36,7 @@ venv\Scripts\activate     # Windows
 pip install -r requirements.txt
 ```
 
-##  How to Use
+## How to Use
 
 ### 1. Dataset Exploration
 ```bash
@@ -54,7 +54,6 @@ python feature_extraction.py
 - Extracts embeddings with DistilBERT ([CLS] representations)
 - Trains linear SVM classifier
 - Evaluates performance on complete dataset
-- **Expected accuracy: ~85%**
 
 ### 3. DistilBERT Fine-tuning
 ```bash
@@ -63,7 +62,16 @@ python fine_tuning.py
 - End-to-end DistilBERT fine-tuning
 - Training with clean progress table
 - Evaluation on validation and test sets
-- **Expected accuracy: ~90-95%**
+
+### 4. Image-to-Story Generator
+```bash
+python translator_storyteller.py
+```
+- Generates captions from images using BLIP
+- Creates stories from captions using TinyStories
+- Interactive interface for image input
+- Supports URLs and local image files
+- Adjustable story length (short/medium/long)
 
 ## Dataset
 
@@ -77,16 +85,28 @@ python fine_tuning.py
 
 ## Models
 
-### DistilBERT
+### DistilBERT (Sentiment Analysis)
 - **Version**: `distilbert-base-uncased`
 - **Parameters**: 66M (vs 110M of BERT-base)
 - **Speed**: ~2x faster than BERT
 - **Performance**: ~97% of BERT performance
 
+### BLIP (Image Captioning)
+- **Version**: `Salesforce/blip-image-captioning-base`
+- **Task**: Image-to-text generation
+- **Architecture**: Vision-Language understanding
+
+### TinyStories (Story Generation)
+- **Version**: `roneneldan/TinyStories-33M`
+- **Parameters**: 33M parameters
+- **Task**: Creative text generation
+- **Style**: Children's stories
+
 ### Configurations
 - **SVM**: DistilBERT features + linear classifier
 - **Fine-tuning**: End-to-end training with Adam optimizer
-
+- **Story Generation**: Temperature=0.6, top_p=0.9, repetition_penalty=1.2
+  
 ## Training Configuration
 
 ```python
@@ -98,7 +118,14 @@ optimizer = "adam"
 max_length = 256
 ```
 
-## Troubleshooting
+## Technical Requirements
+
+- **Python**: 3.7+
+- **GPU**: Recommended (automatic CPU fallback)
+- **RAM**: Minimum 8GB, recommended 16GB
+- **Storage**: ~2GB for models and dataset
+
+## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -117,11 +144,22 @@ max_length = 256
    - This is normal, training will take longer
    - Consider using smaller subsets for testing
 
+4. **Image loading errors (translator_storyteller.py)**
+   ```bash
+   # Make sure Pillow and requests are installed
+   pip install Pillow requests
+   ```
+
+5. **Story generation too repetitive**
+   - Increase `repetition_penalty` (default: 1.2)
+   - Adjust `temperature` for more/less creativity
+
 ### Performance Tips
 
 - **GPU**: Training is ~10x faster
 - **Batch Size**: Increase if you have sufficient memory
 - **Max Length**: Reduce to 128 for shorter texts
+- **Image Size**: Smaller images process faster for story generation
 
 ## References
 
@@ -130,6 +168,6 @@ max_length = 256
 - [Rotten Tomatoes Dataset](https://huggingface.co/datasets/rotten_tomatoes)
 - [Sentiment Analysis Guide](https://huggingface.co/docs/transformers/tasks/sequence_classification)
 
-##  License
+## License
 
 Educational project for Deep Learning Applications Lab.
