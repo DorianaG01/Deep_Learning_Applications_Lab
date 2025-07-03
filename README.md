@@ -72,7 +72,7 @@ Replicate and understand the core findings of the ResNet paper:
 <div align="center" style="font-size: 12px;" >
 
 | Strategy | Optimizer | Test Accuracy | Trainable Params |
-|------|----------|-----------|---------------|------------------|
+|----------|-----------|---------------|------------------|
 | Freeze Input Only | Adam | **53.30%** | 162,180 |
 | No Freeze | Adam | **53.06%** | 162,644 |
 | Freeze Input Only | SGD | **50.64%** | 162,180 |
@@ -225,19 +225,6 @@ python image_story_generator.py
 # Choose story length (short/medium/long)
 ```
 ---
-## Lab 4: Out-of-Distribution Detection 
-Focus: Anomaly detection, adversarial robustness, model security
-
-### Key Results:
-
-Autoencoder Excellence: Reconstruction-based detection achieves AUC = 0.94 (near-perfect)
-ODIN Method Success: Advanced temperature scaling + preprocessing reaches AUC = 0.81
-CNN Baseline Comparison: Standard CNN confidence scoring shows AUC = 0.49 (baseline)
-Method Complementarity: Demonstrates vast performance differences between approaches
-Adversarial Training Pipeline: FGSM-based robust model training implementation
-Insight: Reconstruction-based methods significantly outperform confidence-based approaches for OOD detection
-
----
 
 # Lab 4: Advanced Model Security & Anomaly Detection
 
@@ -349,7 +336,7 @@ def odin_grid_search(model, dataloader_in, dataloader_ood, T_values, eps_values)
 ### Comparison with Other Methods
 
 | Method | AUC Score | Approach | Computational Cost |
-|--------|-----------|----------|-------------------|
+|--------|-----------|--------------------|-------------------|
 | **ODIN** | **0.8122** | Temperature + Preprocessing | Medium |
 | Autoencoder | 0.9400 | Reconstruction Error | High |
 | CNN Confidence | 0.4900 | Max Softmax | Low |
